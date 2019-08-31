@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,15 @@ public class MakeService {
         ShowA showA = new ShowA("dfaf", "dsfafd");
 
         showARepository.save(showA);
+        
+        getAll();
+    }
+    
+    public void getAll() {
+    	List<ShowA> a = showARepository.findAll();
+    	for (ShowA b : a) {
+    		System.out.println(b.toString());
+    	}
     }
     
     public void insertData2() {
