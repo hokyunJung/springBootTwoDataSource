@@ -51,7 +51,9 @@ public class DataBaseConfigSecond {
         Map<String, Object> properties = new HashMap<String, Object>();    
         properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("second.hibernate.hbm2ddl.auto"));
         properties.put("hibernate.dialect", env.getRequiredProperty("second.hibernate.dialect"));
-         
+        properties.put("hibernate.implicit_naming_strategy", env.getRequiredProperty("spring.jpa.hibernate.naming.implicit-strategy"));
+        properties.put("hibernate.physical_naming_strategy", env.getRequiredProperty("spring.jpa.hibernate.naming.physical-strategy"));
+          
          
         return builder
           .dataSource(secondDataSource)

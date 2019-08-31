@@ -9,14 +9,11 @@ import javax.persistence.Id;
 @Entity(name="show_b")
 public class ShowB {
 	
-	@Column(name="this_key")
 	@Id
 	private int thisKey;
 	
-	@Column(name="best_case")
 	private String bestCase;
 	
-	@Column(name="worst_case")
 	private String worstCase;
 	
 	public ShowB() {

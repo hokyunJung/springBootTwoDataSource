@@ -11,11 +11,10 @@ import javax.persistence.Id;
 @Entity(name="show_a")
 public class ShowA {
 	@Id
-	@Column(name="this_key")
 	private int thisKey;
-	@Column(name="best_show")
+
 	private String bestShow;
-	@Column(name="worst_show")
+
 	private String worstShow;
 	
 	public ShowA() {
